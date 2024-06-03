@@ -1,0 +1,38 @@
+* {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(148, 38%, 91%);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 100%);
+}
+@media screen and (min-width: 370px) {
+  .wrapper {
+    max-width: 600px;
+    width: 100%;
+    margin: 11rem auto;
+  }
+}
+.wrapper .form .fullname {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 370px) {
+  .wrapper .form .fullname {
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
