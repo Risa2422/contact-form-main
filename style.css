@@ -1,8 +1,8 @@
 * {
-  font-family: "Karla", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Karla", sans-serif;
 }
 
 body {
@@ -12,27 +12,153 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   background-color: hsl(0, 0%, 100%);
 }
 @media screen and (min-width: 370px) {
   .wrapper {
     max-width: 600px;
     width: 100%;
-    margin: 11rem auto;
+    margin: 7rem auto;
   }
+}
+.wrapper h3 {
+  color: hsl(187, 24%, 22%);
+  font-size: 25px;
+}
+.wrapper .form .container {
+  margin-top: 1rem;
+}
+.wrapper .form .input {
+  border: 1px hsl(186, 15%, 59%) solid;
+  border-radius: 5px;
+  width: 100%;
+  padding: 8px 5px 8px 20px;
+  height: 2.5rem;
+  font-size: 16px;
+}
+.wrapper .form .input:hover {
+  border: 1px hsl(169, 82%, 27%) solid;
+  cursor: pointer;
+}
+.wrapper .form .label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: hsl(187, 24%, 22%);
+}
+.wrapper .form .label::after {
+  content: "*";
+  padding-left: 10px;
+  color: hsl(169, 82%, 27%);
 }
 .wrapper .form .fullname {
   display: flex;
-  flex-direction: column;
   gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media screen and (min-width: 370px) {
   .wrapper .form .fullname {
     flex-direction: row;
   }
+}
+.wrapper .form .email {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .form .querytype {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .form .querytype .typearea {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+@media screen and (min-width: 370px) {
+  .wrapper .form .querytype .typearea {
+    flex-direction: row;
+  }
+}
+.wrapper .form .querytype .typearea label {
+  position: relative;
+  margin-left: 25px;
+}
+.wrapper .form .querytype .typearea label::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+.wrapper .form .querytype .typearea input[name=query-type] {
+  display: none;
+}
+.wrapper .form .querytype .typearea input[name=query-type]:checked ~ label::before {
+  background: url("./assets/images/icon-radio-selected.svg") no-repeat center center;
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+.wrapper .form .querytype .typearea input[name=query-type] .general,
+.wrapper .form .querytype .typearea .support {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px hsl(186, 15%, 59%) solid;
+  color: hsl(187, 24%, 22%);
+}
+.wrapper .form .querytype .typearea .checked {
+  background-color: hsl(148, 38%, 91%);
+}
+.wrapper .form .consent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+.wrapper .form .consent .consent-content {
+  position: relative;
+  margin-left: 25px;
+  margin-bottom: 0;
+  color: hsl(187, 24%, 22%);
+}
+.wrapper .form .consent .consent-content::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+.wrapper .form .consent input[name=consent] {
+  display: none;
+}
+.wrapper .form .consent input[name=consent]:checked ~ .consent-content::before {
+  background: url("./assets/images/icon-checkbox-check.svg") no-repeat center center;
+  width: 18px;
+  height: 18px;
+  border: none;
+}
+.wrapper .form .textarea {
+  height: 4em;
+}
+.wrapper .form .submit {
+  display: flex;
+  padding-top: 1.5rem;
+}
+.wrapper .form .submit .submit-button {
+  border: none;
+  padding: 0.5rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(169, 82%, 27%);
 }
 
 /*# sourceMappingURL=style.css.map */

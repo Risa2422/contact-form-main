@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -21,43 +20,64 @@
     <main class="wrapper">
       <h3>Contact Us</h3>
       <form action="" class="form">
-        <div class="fullname">
+        <div class="fullname container">
           <div class="firstname">
-            <label for="first-name">First Name</label>
-            <input type="text" name="1" id="first-name" />
+            <label for="first-name" class="label">First Name</label>
+            <input type="text" class="input" name="1" id="first-name" />
           </div>
           <div class="lastname">
-            <label for="last-name">Last Name</label>
-            <input type="text" name="1" id="last-name" />
+            <label for="last-name" class="label">Last Name</label>
+            <input type="text" class="input" name="1" id="last-name" />
           </div>
         </div>
-        <div class="email">
-          <label for="email">Email Address</label>
-          <input type="email" name="" id="email" />
+        <div class="email container">
+          <label for="email" class="label">Email Address</label>
+          <input type="email" class="input" name="" id="email" />
         </div>
-        <div class="Querytype">
-          <p>Query Type</p>
-          <div class="general">
-            <label for="query-type-1">General Enquiry</label>
-            <input type="radio" name="query-type" id="query-type-1" />
+        <div class="querytype container">
+          <p class="label">Query Type</p>
+          <div class="typearea">
+            <div class="general input">
+              <input
+                type="radio"
+                class="radio"
+                name="query-type"
+                id="query-type-general"
+              />
+              <label for="query-type-general">General Enquiry</label>
+            </div>
+            <div class="support input">
+              <input
+                type="radio"
+                class="radio"
+                name="query-type"
+                id="query-type-support"
+              />
+              <label for="query-type-support">Support Enquiry</label>
+            </div>
           </div>
-          <div class="support">
-            <label for="query-type-2">Support Enquiry</label>
-            <input type="radio" name="query-type" id="query-type-2" />
-          </div>
         </div>
-        <div class="message">
-          <label for="message">Message</label>
-          <input type="text" name="" id="message" />
+        <div class="message container">
+          <label for="message" class="label">Message</label>
+          <textarea class="textarea input" rows="5" cols="30"></textarea>
         </div>
-        <div class="concent">
-          <input type="checkbox" name="" id="checkbox" />
-          <label for="checkbox">I consent to being contacted by the team</label>
+        <div class="consent container">
+          <input type="checkbox" name="consent" id="checkbox" />
+          <label for="checkbox" class="consent-content label"
+            >I consent to being contacted by the team</label
+          >
         </div>
         <div class="submit">
-          <input type="submit" name="" id="" value="Submit" />
+          <input
+            type="submit"
+            class="submit-button input"
+            name=""
+            id=""
+            value="Submit"
+          />
         </div>
       </form>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>

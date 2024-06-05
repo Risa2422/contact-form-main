@@ -1,10 +1,14 @@
-const test = document.querySelector(".general");
+const general = document.querySelector(".general");
+const support = document.querySelector(".support");
+const generalId = document.getElementById("query-type-general");
+const supportId = document.getElementById("query-type-support");
 
-test.addEventListener("click", () => {
-  console.log("hi");
-  const background = document.getElementById("query-type-general");
-  if (background.checked == true) {
-    console.log("background");
-    test.classList.add("background");
-  }
+general.addEventListener("click", () => {
+  general.classList.add("checked");
+  support.classList.remove("checked");
+});
+
+support.addEventListener("click", () => {
+  support.classList.add("checked");
+  general.classList.remove("checked");
 });
