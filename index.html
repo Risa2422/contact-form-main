@@ -19,20 +19,38 @@
   <body>
     <main class="wrapper">
       <h3>Contact Us</h3>
-      <form action="" class="form">
+      <form action="#" method="post" class="form" id="contact_form">
         <div class="fullname container">
           <div class="firstname">
             <label for="first-name" class="label">First Name</label>
-            <input type="text" class="input" name="1" id="first-name" />
+            <input
+              type="text"
+              class="input"
+              name="firstname"
+              id="first-name"
+              tabindex="1"
+            />
           </div>
           <div class="lastname">
             <label for="last-name" class="label">Last Name</label>
-            <input type="text" class="input" name="1" id="last-name" />
+            <input
+              type="text"
+              class="input"
+              name="lastname"
+              id="last-name"
+              tabindex="2"
+            />
           </div>
         </div>
         <div class="email container">
           <label for="email" class="label">Email Address</label>
-          <input type="email" class="input" name="" id="email" />
+          <input
+            type="email"
+            class="input"
+            name="email"
+            id="email"
+            tabindex="3"
+          />
         </div>
         <div class="querytype container">
           <p class="label">Query Type</p>
@@ -43,8 +61,11 @@
                 class="radio"
                 name="query-type"
                 id="query-type-general"
+                value="general"
               />
-              <label for="query-type-general">General Enquiry</label>
+              <label for="query-type-general" tabindex="4"
+                >General Enquiry</label
+              >
             </div>
             <div class="support input">
               <input
@@ -52,18 +73,25 @@
                 class="radio"
                 name="query-type"
                 id="query-type-support"
+                value="support"
               />
-              <label for="query-type-support">Support Enquiry</label>
+              <label for="query-type-support" tabindex="5"
+                >Support Enquiry</label
+              >
             </div>
           </div>
         </div>
         <div class="message container">
           <label for="message" class="label">Message</label>
-          <textarea class="textarea input" rows="5" cols="30"></textarea>
+          <textarea
+            class="textarea input"
+            name="message"
+            tabindex="6"
+          ></textarea>
         </div>
         <div class="consent container">
-          <input type="checkbox" name="consent" id="checkbox" />
-          <label for="checkbox" class="consent-content label"
+          <input type="checkbox" name="consent" id="checkbox" value="consent" />
+          <label for="checkbox" class="consent-content label" tabindex="7"
             >I consent to being contacted by the team</label
           >
         </div>
@@ -74,10 +102,22 @@
             name=""
             id=""
             value="Submit"
+            tabindex="8"
           />
         </div>
       </form>
+      <div class="success">
+        <div class="success-logo">
+          <img src="./assets/images/icon-success-check.svg" alt="success" />
+          <p>Message Sent!</p>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
     </main>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script src="./app.js"></script>
   </body>
 </html>
